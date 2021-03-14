@@ -42,35 +42,3 @@ def main():
 	print(div_lst[len_lst.index(max(len_lst))])
 if __name__ == '__main__':
 	main()
-
-
-# def find_pattern(div):
-# 	dec = euclid(1,div, 1,2000)
-# 	rec = ''
-# 	ind = 1
-# 	while ind<len(dec):
-# 		if ind>2:
-# 			if dec[ind] == dec[1]:
-# 				if all(dec[i] == dec[ind+i-1] for i in range(1,ind-1)):
-# 					return rec
-# 		rec+=dec[ind]
-# 		ind+=1
-# print(find_pattern(286))
-
-
-# def find_pattern(div):
-# 	dec = euclid(1,div, 1,2000)
-# 	rec = ''
-# 	ind = 0
-# 	while ind<len(dec) - 1:
-# 		if ind>1:
-# 			if dec[ind] == dec[0]:
-# 				# print(ind)
-# 				try:
-# 					if all(dec[i] == dec[ind+i] for i in range(ind)):
-# 						return rec
-# 				except:
-# 					return ind
-# 		rec+=dec[ind]
-# 		ind+=1
-# print(find_pattern(286))
