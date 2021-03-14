@@ -8,9 +8,6 @@ def check(n):
 	if str(n) == str(n)[::-1] and to_binary(n) == to_binary(n)[::-1]:
 		return True
 	return False
-# n = 99
-# print(to_binary(n))
-# print(check(n))
 def main():
 	s = 0
 	for i in range(1,1000000):
