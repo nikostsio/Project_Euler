@@ -7,18 +7,22 @@ def isPrime(n):
 			return False
 	return True
 # print(isPrime(971))
-def isCircular(n):
+def isCircularPrime(n):
 	n = str(n)
 	for start in range(len(n)):
 		if not isPrime(int(n[start:len(n)]+n[0:start])):
 			return False
 	return True
-# print(isCircular(71))
-counter = 0
-for i in range(1,1000000):
-	if isCircular(i):
-		counter += 1
-		print(i)
-print('Your answer is...')
-print(counter)
+# print(isCircularPrime(71))
+def main():	
+	counter = 0
+	for i in range(1,1000000):
+		if isCircularPrime(i):
+			counter += 1
+			print(i)
+	print('Your answer is...')
+	print(counter)
 
+
+if __name__=='__main__':
+	main()
