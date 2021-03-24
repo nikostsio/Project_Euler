@@ -9,10 +9,14 @@ def find_solutions(p):
 				counter+=1
 	return counter
 # find_solutions(120)
-lst_p = []
-lst = []
-for p in range(10,1000):
-	print(p)
-	lst_p.append(p)
-	lst.append(find_solutions(p))
-print(lst_p[lst.index(max(lst))])
+def main():
+
+	lst_p = []
+	lst = []
+	for p in range(10,1000):
+		print(p)
+		lst_p.append(p)
+		lst.append(find_solutions(p))
+	print(lst_p[lst.index(max(lst))])
+if __name__=='__main__':
+	main()
