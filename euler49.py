@@ -26,8 +26,6 @@ def answer(a,b):
 		c+=str(a+b)
 		a+=b
 	return c
-print(answer(2969,3330))
-
 def main():
 	for a in range(1488,10000):
 		print(a)

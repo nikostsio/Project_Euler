@@ -11,7 +11,6 @@ def goldbach_split(n):
 	for i in range(int(math.sqrt(n))+1):
 		for j in primes:
 			if j+2*i**2==n:
-				# print(j,'+2 *',i,'**2 =',n)
 				return True
 	return False
 # print(goldbach_split(33))
@@ -27,4 +26,4 @@ def main():
 				print(i)
 		i+=2
 if __name__=='__main__':
-	main()o
+	main()
