@@ -1,6 +1,4 @@
 from itertools import combinations, chain
-
-
 def isPrime(n):
 	for i in range(2,int(n**(1/2))+1):
 		if n%i==0:
@@ -23,16 +21,8 @@ def sieve(n):
 			primes.append(str(i))
 	return primes
 
-
-
 primes = [i for i in sieve(1000000) if len(i) - len(set(i))>=3]
 print(len(primes))
-
-
-
-
-
-
 ### I generated the dictionairy i wanted to use with the length of the number and the possible parts that can be replaced
 
 # len_dict = {}
@@ -50,8 +40,6 @@ len_dict = {2: [('0',)],
  5: [('0', '1'), ('0', '2'), ('0', '3'), ('1', '2'), ('1', '3'), ('2', '3'), ('0', '1', '2'), ('0', '1', '3'), ('0', '2', '3'),('1', '2', '3'),('0', '1', '2', '3')],
  6: [('0', '1'), ('0', '2'), ('0', '3'), ('0', '4'),('1', '2'), ('1', '3'), ('1', '4'),('2', '3'), ('2', '4'), ('3', '4'), ('0', '1', '2'), ('0', '1', '3'), ('0', '1', '4'),('0', '2', '3'), ('0', '2', '4'),('0', '3', '4'),('1', '2', '3'), ('1', '2', '4'),('1', '3', '4'),('2', '3', '4'),('0', '1', '2', '3'), ('0', '1', '2', '4'),('0', '1', '3', '4'),('0', '2', '3', '4'),('1', '2', '3', '4'),('0', '1', '2', '3', '4')]}
 
-
-
 # Funcion to find the value of the prime sequence
 def find_num(prime):
 	prime_lst = [i for i in prime]
@@ -68,11 +56,13 @@ def find_num(prime):
 				num_of_primes+=1
 		biggest = max(biggest,num_of_primes)
 	return biggest
-
 # print(find_num('56003'))
+def main():
 
-for i in primes:
-	print(i)
-	if find_num(i)==8:
-		print(f'------------------>{i}<-----------------------')
-		break
+	for i in primes:
+		print(i)
+		if find_num(i)==8:
+			print(f'------------------>{i}<-----------------------')
+			break
+if __name__=='__main__':
+	main()
