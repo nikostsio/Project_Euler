@@ -78,4 +78,5 @@ def euler58_():
 			print(f'-->{i}<--')
 			break
 		print(i)
-euler58_()
+if __name__=='__main__':
+	euler58_()
