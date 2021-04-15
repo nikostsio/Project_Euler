@@ -1,8 +1,4 @@
-import time
-def prim(n,primes):
-    for i in primes:
-        if n%i == 0:
-            return False
+from functions import sieve
 def factors(n,primes):
     factors = []
     for i in primes:
@@ -11,10 +7,7 @@ def factors(n,primes):
             factors.append(i)
     return factors
 def main(): 
-    primes = [2]
-    for i in range(2,10000):
-        if prim(i,primes) == None:
-            primes.append(i)
+    primes = sieve(20000)
     for j in range(0,1000000):
         if  j%1000 == 0:
             print(j)

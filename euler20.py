@@ -1,7 +1,4 @@
-def factorial(n):
-	if n == 1:
-		return 1
-	return n*factorial(n-1)
+from functions import factorial
 def find_sum(n):
 	n = str(n)
 	sum_ = 0

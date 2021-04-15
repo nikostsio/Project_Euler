@@ -1,24 +1,12 @@
-import math
-import sys
 from itertools import permutations
-def isPrime(n):
-	if n<=1:
-		return False
-	for i in range(2,int(math.sqrt(n))+1):
-		if n%i==0:
-			return False
-	return True
+from functions import isPrime
 def check(x,y):
-	perms = permutations(str(x))
-	better_perms = []
-	for perm in perms:
-		better_perms.append(''.join(perm))
+	perms = [''.join(i) for i in permutations(str(x))]
 	for i in range(3):
 		if not isPrime(x+(i*y)):
 			return False
-		if str(x+(i*y)) not in better_perms:
+		if str(x+(i*y)) not in perms:
 			return False
-	# if all(isPrime(x+(i*y)) and str(x+(i*y)) in better_perms for i in range(3)):
 	return True
 def answer(a,b):
 	c = str(a)

@@ -1,9 +1,5 @@
 from itertools import combinations, chain
-def isPrime(n):
-	for i in range(2,int(n**(1/2))+1):
-		if n%i==0:
-			return False
-	return True
+from functions import isPrime
 def sieve(n):
 	try:
 		is_prime = [0]+[0]+[1]*(n-2)
@@ -22,7 +18,6 @@ def sieve(n):
 	return primes
 
 primes = [i for i in sieve(1000000) if len(i) - len(set(i))>=3]
-print(len(primes))
 ### I generated the dictionairy i wanted to use with the length of the number and the possible parts that can be replaced
 
 # len_dict = {}

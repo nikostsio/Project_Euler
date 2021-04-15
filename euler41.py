@@ -1,20 +1,4 @@
-import math
-def isPadnigital(n):
-	lst = [str(i) for i in range(1,len(str(n))+1)]
-	for dig in str(n):
-		if dig in lst:
-			del lst[lst.index(dig)]
-		else:
-			return False
-	if len(lst) == 0:
-		return True
-def isPrime(n):
-	if n<=1:
-		return False
-	for i in range(2,int(math.sqrt(n))+1):
-		if n%i==0:
-			return False
-	return True
+from functions import isPrime, isPadnigital
 
 def same_digits(n):
 	for i in str(n):

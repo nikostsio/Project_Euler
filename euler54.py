@@ -1,13 +1,3 @@
-# Getting the poker hands
-file = open("poker.txt", "r")
-hand_lst = []
-for line in file:
-	stripped_line = line.strip()
-	hand_lst.append(stripped_line)
-file.close()
-pair_lst = []
-for i in hand_lst:
-	pair_lst.append((i[:14],i[15:]))
 
 num_dict = {'1':1,'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9,'T':10,'J':11,'Q':12,'K':13,'A':14}
 def find(n, dict_):
@@ -66,6 +56,17 @@ def high_cards(lst1, lst2):
 		else:
 			return 2
 def main():
+	# Getting the poker hands
+	file = open("poker.txt", "r")
+	hand_lst = []
+	for line in file:
+		stripped_line = line.strip()
+		hand_lst.append(stripped_line)
+	file.close()
+	pair_lst = []
+	for i in hand_lst:
+		pair_lst.append((i[:14],i[15:]))
+
 	winner1 = 0
 	for i in pair_lst:
 		nums1 = [num_dict[j[0]] for j in i[0].split(' ')]
@@ -85,7 +86,7 @@ if __name__=='__main__':
 
 
 
-### This is the function I first coded which names the value of the hand
+### This is the function I first coded, which names the value of the hand
 
 # def time_num(n_lst, s_lst):
 # 	the_dict = {}

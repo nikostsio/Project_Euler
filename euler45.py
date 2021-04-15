@@ -7,14 +7,18 @@ def wikiHexagonal(n):
 	if (((8*n+1)**(1/2))+1)%4==0:
 		return True
 	return False
-num = 2
-counter = 0
-running = True
-while running:
-	Tn = num*(num+1)/2
-	if wikiPentagonal(Tn) and wikiHexagonal(Tn):
-		print(Tn)
-		counter +=1
-	if counter == 2:
-		running = False
-	num+=1
+def main():
+
+	num = 2
+	counter = 0
+	running = True
+	while running:
+		Tn = num*(num+1)/2
+		if wikiPentagonal(Tn) and wikiHexagonal(Tn):
+			print(Tn)
+			counter +=1
+		if counter == 2:
+			running = False
+		num+=1
+if __name__=='__main__':
+	main()

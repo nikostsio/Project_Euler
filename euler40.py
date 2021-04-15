@@ -1,9 +1,9 @@
-irr_fraction = ''
-num = 1
-while len(irr_fraction)<1000000:
-	irr_fraction+=str(num)
-	num+=1
 def main():
+	irr_fraction = ''
+	num = 1
+	while len(irr_fraction)<1000000:
+		irr_fraction+=str(num)
+		num+=1
 
 	prod = 1
 	for i in range(7):

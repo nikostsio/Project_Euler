@@ -1,9 +1,4 @@
-def factorial(n):
-	if n ==0:
-		return 1
-	if n==1:
-		return 1
-	return n*factorial(n-1)
+from functions import factorial
 def check(n):
 	fact_sum = 0
 	for dig in str(n):

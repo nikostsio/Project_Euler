@@ -1,12 +1,4 @@
-import math
-def isPrime(n):
-	if n == 1:
-		return False
-	for i in range(2, int(math.sqrt(n))+1):
-		if n%i==0:
-			return False
-	return True
-# print(isPrime(971))
+from functions import isPrime
 def isCircularPrime(n):
 	n = str(n)
 	for start in range(len(n)):
@@ -22,7 +14,6 @@ def main():
 			print(i)
 	print('Your answer is...')
 	print(counter)
-
 
 if __name__=='__main__':
 	main()

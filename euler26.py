@@ -20,17 +20,15 @@ def find_pattern(div):
 		while ind<len(dec)-ind+start:
 			if ind>start+1:
 				if dec[ind] == dec[start]:
-					# print(ind,start)
-					try:
-						if all(dec[i] == dec[ind+i-start] for i in range(start,ind-start)):
-							if len(rec) == 2 and rec[0]==rec[1]:
-								return 1
-							return len(rec)
-					except:
-						return start, ind
+					if all(dec[i] == dec[ind+i-start] for i in range(start,ind-start)):
+						if len(rec) == 2 and rec[0]==rec[1]:
+							return 1
+						# return rec
+						return len(rec)
 			rec+=dec[ind]
 			ind+=1
 	return 0
+
 def main():
 	div_lst = []
 	len_lst = []

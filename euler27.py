@@ -1,14 +1,7 @@
-import math
-def prime_checker(n):
-	if n<=0:
-		return False
-	for i in range(2,int(math.sqrt(n))+1):
-		if n%i==0:
-			return False
-	return True
+from functions import isPrime
 def find_ns(a, b):
 	n = 0
-	while prime_checker(n**2+a*n+b):
+	while isPrime(n**2+a*n+b):
 			n+=1
 	return n
 def main():

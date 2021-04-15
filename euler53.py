@@ -1,7 +1,4 @@
-def factorial(n):
-	if n<=1: 
-		return 1
-	return n*factorial(n-1)
+from functions import factorial
 def num_of_combs(a,b):
 	return factorial(a)/(factorial(b)*factorial(a-b))
 def main():

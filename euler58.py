@@ -1,11 +1,4 @@
-def isPrime(n):
-	if n<=1:
-		return False
-	for i in range(2,int(n**(1/2))+1):
-		if n%i==0:
-			return False
-	return True
-
+from functions import isPrime
 def turn_left(curr_dir):
 	curr_dir = [curr_dir[1], -curr_dir[0]]
 	return curr_dir

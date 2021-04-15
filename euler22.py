@@ -1,5 +1,3 @@
-import os
-import sys
 import ast 
 file = open("names.txt", "r")
 contents = file.read()
@@ -17,4 +15,6 @@ def name_score():
 	for i, name in enumerate(name_lst):
 		name_sum += ab_value(name)*(i+1)
 	return name_sum
-print(name_score())
+
+if __name__=='__main__':
+	print(name_score())

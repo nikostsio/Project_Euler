@@ -4,5 +4,7 @@ s_lst = []
 for a in range(100):
 	for b in range(100):
 		s_lst.append(dig_sum(a**b))
-
-print(max(s_lst))
+def main():
+	print(max(s_lst))
+if __name__=='__main__':
+	main()
